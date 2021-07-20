@@ -2,16 +2,17 @@
 
 
 <div class="tm-main-content">
+
    <section class="row tm-margin-b-l">
       <div class="col-12">
-         <h2 class="tm-blue-text tm-margin-b-p">Contact Me</h2>
+         <h2 class="tm-blue-text tm-margin-b-p">Add new book</h2>
       </div>
       <div class="col-md-6 col-sm-12 mb-md-0 mb-5 tm-overflow-auto">
          <div class="mr-lg-5">
             <!-- contact form -->
             <form action="#" method="post" class="tm-contact-form">
                <div class="form-group">
-                  <input type="text" id="bookTitle" name="bookTitle" class="form-control" placeholder="Name" required />
+                  <input type="text" id="bookTitle" name="bookTitle" class="form-control" placeholder="New book" required />
                </div>
                <div class="form-group">
                   <select class="form-select" aria-label="Default select example" id="myCountries">
@@ -30,13 +31,7 @@
          </div>
       </div>
    </section>
-</div>
-<div class="tm-main-content">
    <section class="tm-margin-b-l ">
-      <header>
-         <h2 class="tm-main-title">Welcome to our bookstore</h2>
-      </header>
-      <p>Lorem ipsum condimentum vitae consectetur id, elementum sit amet erat.</p>
       <div class="tm-gallery">
          <div class="row" id="myBooks">
             <!-- <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
@@ -75,9 +70,9 @@
    - Jfkeci
 </footer>
 </div>
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/includes/jquery-1.11.3.min.js"></script>
+<script src="js/includes/popper.min.js"></script>
+<script src="js/includes/bootstrap.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 

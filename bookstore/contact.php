@@ -95,9 +95,9 @@
          </footer>
       </div>
       <!-- load JS files -->
-      <script src="js/jquery-1.11.3.min.js"></script> 
-      <script src="js/popper.min.js"></script>        
-      <script src="js/bootstrap.min.js"></script>     
+      <script src="jsincjs/includes/jquery-1.11.3.min.js"></script> 
+      <script src="jsincjs/includes/popper.min.js"></script>        
+      <script src="jsincjs/includes/bootstrap.min.js"></script>     
       <script src="js/contact.js"></script>     
       <script>     </script>             
    </body>
