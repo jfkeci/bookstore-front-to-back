@@ -9,24 +9,23 @@
       </div>
       <div class="col-md-6 col-sm-12 mb-md-0 mb-5 tm-overflow-auto">
          <div class="mr-lg-5">
-            <!-- contact form -->
-            <form action="#" method="post" class="tm-contact-form">
+            <form class="tm-contact-form">
                <div class="form-group">
-                  <input type="text" id="bookTitle" name="bookTitle" class="form-control" placeholder="New book" required />
+                  <input type="text" id="bookTitle" class="form-control" placeholder="New book" required />
                </div>
                <div class="form-group">
-                  <select class="form-select" aria-label="Default select example" id="myCountries">
+                  <select class="form-select" id="myCountriesDropdown">
                   </select>
                </div>
                <div class="form-group">
-                  <select class="form-select" aria-label="Default select example" id="myAuthors">
+                  <select class="form-select" id="myAuthorsDropdown">
                   </select>
                </div>
                <div class="form-group">
-                  <select class="form-select" aria-label="Default select example" id="myGenres">
+                  <select class="form-select" id="myGenresDropdown">
                   </select>
                </div>
-               <button type="submit" class="tm-btn tm-btn-blue float-right">Add</button>
+               <button id="saveBookButton" class="tm-btn tm-btn-blue float-left">Add</button>
             </form>
          </div>
       </div>
@@ -74,6 +73,7 @@
 <script src="js/includes/popper.min.js"></script>
 <script src="js/includes/bootstrap.min.js"></script>
 <script src="js/index.js"></script>
+<script src="js/global.js"></script>
 </body>
 
 </html>

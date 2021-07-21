@@ -98,7 +98,7 @@
       <script src="jsincjs/includes/jquery-1.11.3.min.js"></script> 
       <script src="jsincjs/includes/popper.min.js"></script>        
       <script src="jsincjs/includes/bootstrap.min.js"></script>     
-      <script src="js/contact.js"></script>     
-      <script>     </script>             
+      <script src="js/contact.js"></script>  
+      <script src="js/global.js"></script>               
    </body>
 </html>

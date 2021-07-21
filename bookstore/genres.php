@@ -88,6 +88,7 @@
       <script src="js/includes/jquery-1.11.3.min.js"></script>         
       <script src="js/includes/popper.min.js"></script>                
       <script src="js/includes/bootstrap.min.js"></script>             
-      <script src="js/index.js"></script>             
+      <script src="js/index.js"></script> 
+      <script src="js/global.js"></script>            
    </body>
 </html>

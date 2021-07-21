@@ -68,6 +68,6 @@
       <script src="js/includes/popper.min.js"></script>        
       <script src="js/includes/bootstrap.min.js"></script>     
       <script src="js/contact.js"></script>     
-      <script>     </script>             
+      <script src="js/global.js"></script>          
    </body>
 </html>
