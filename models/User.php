@@ -64,6 +64,14 @@ class User{
         
         $stmt = $this->conn->prepare($query);
 
+        $this->username = htmlspecialchars(strip_tags($this->username));
+        $this->email = htmlspecialchars(strip_tags($this->email));
+        $this->password = htmlspecialchars(strip_tags($this->password));
+        $this->country = htmlspecialchars(strip_tags($this->country));
+        $this->zip_code = htmlspecialchars(strip_tags($this->zip_code));
+        $this->city = htmlspecialchars(strip_tags($this->city));
+        $this->address = htmlspecialchars(strip_tags($this->address));
+
         $stmt->bindParam(':username', $this->username);
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':password', $this->password);
@@ -93,6 +101,15 @@ class User{
             id = :id ;';
 
         $stmt = $this->conn->prepare($query);
+
+        $this->id = htmlspecialchars(strip_tags($this->id));
+        $this->username = htmlspecialchars(strip_tags($this->username));
+        $this->email = htmlspecialchars(strip_tags($this->email));
+        $this->password = htmlspecialchars(strip_tags($this->password));
+        $this->country = htmlspecialchars(strip_tags($this->country));
+        $this->zip_code = htmlspecialchars(strip_tags($this->zip_code));
+        $this->city = htmlspecialchars(strip_tags($this->city));
+        $this->address = htmlspecialchars(strip_tags($this->address));
 
         $stmt->bindParam(':id', $this->id);
 
