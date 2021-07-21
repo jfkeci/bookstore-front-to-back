@@ -4,20 +4,54 @@
 <div class="tm-main-content">
    <section class="row tm-margin-b-l">
       <div class="col-12">
-         <h2 class="tm-blue-text tm-margin-b-p">Contact Us</h2>
+         <h2 class="tm-blue-text tm-margin-b-p">Login</h2>
       </div>
       <div class="col-md-6 col-sm-12 mb-md-0 mb-5 tm-overflow-auto">
          <div class="mr-lg-5">
             <!-- contact form -->
             <form class="tm-contact-form">
                <div class="form-group">
+                  <input type="email" id="loginEmail" class="form-control" placeholder="Email" required />
+               </div>
+               <div class="form-group">
+                  <input type="password" id="loginPassword" class="form-control" placeholder="Password" required />
+               </div>
+               <button class="tm-btn tm-btn-blue float-right" id="loginButton">Login</button>
+            </form>
+         </div>
+      </div>
+      <div class="col-12">
+         <h2 class="tm-blue-text tm-margin-b-p">Register</h2>
+      </div>
+      <div class="col-md-6 col-sm-12 mb-md-0 mb-5 tm-overflow-auto">
+         <div class="mr-lg-5">
+            <!-- <form class="tm-contact-form">
+               <div class="form-group">
                   <input type="text" id="email" name="email" class="form-control" placeholder="Name" required />
                </div>
                <div class="form-group">
                   <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
                </div>
-               <button class="tm-btn tm-btn-blue float-right">Submit</button>
-            </form>
+               <div class="form-group">
+                  <input type="text" id="email" name="email" class="form-control" placeholder="Name" required />
+               </div>
+               <div class="form-group">
+                  <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
+               </div>
+               <div class="form-group">
+                  <input type="text" id="email" name="email" class="form-control" placeholder="Name" required />
+               </div>
+               <div class="form-group">
+                  <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
+               </div>
+               <div class="form-group">
+                  <input type="text" id="email" name="email" class="form-control" placeholder="Name" required />
+               </div>
+               <div class="form-group">
+                  <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
+               </div>
+               <button class="tm-btn tm-btn-blue float-right">Register</button>
+            </form> -->
          </div>
       </div>
       <div class="col-md-6 col-sm-12">
@@ -37,10 +71,10 @@
       </div>
       <div class="media-body">
          <header>
-            <h2>Need Help?</h2>
+            <h2>Need a programmer?</h2>
          </header>
-         <p class="tm-margin-b">Curabitur magna tellus, condimentum vitae consectetur id, elementum sit amet erat. Phasellus arcu leo, sagittis fringilla nisi et, pulvinar vestibulum mi. Maecenas mollis ullamcorper est at dignissim.</p>
-         <a href="" class="tm-white-bordered-btn">Live Chat</a>
+         <p class="tm-margin-b">text</p>
+         <a href="contact.php" class="tm-white-bordered-btn">Coontact me</a>
       </div>
    </section>
 </div>

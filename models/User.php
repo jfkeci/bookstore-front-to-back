@@ -143,6 +143,30 @@ class User{
         printf("error: %s.\n, $stmt->error");
         return false;
     }
+
+    public function login(){
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE email = :email AND password = :password;';
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':password', $this->password);
+
+        if($stmt->execute()){
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            $this->id=$row['id'];
+            $this->username=$row['username'];
+            $this->email=$row['email'];
+            $this->password=$row['password'];
+            $this->country=$row['country'];
+            $this->zip_code=$row['zip_code'];
+            $this->city=$row['city'];
+            $this->address=$row['address'];
+        }
+
+        
+    }
 }
 
 ?>
