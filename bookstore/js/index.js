@@ -4,17 +4,25 @@ $(document).ready(function () {
     showBooks();
 
     $('#saveBookButton').click(function () {
+
+        var bookTitle = $('#bookTitle').val()
+        var bookAuthor = $('#myAuthorsDropdown').val()
+        var bookGenre = $('#myGenresDropdown').val()
+        var bookLanguage = $('#myCountriesDropdown').val()
+
         fetch('http://localhost/practice/php/php-rest-api-2/api/books/create.php',
             {
                 body: JSON.stringify({
-                    name:       'new author',/* $('#bookTitle').val(), */
-                    author:     22,/* $('#myAuthorsDropdown').val(), */
-                    genre:      1,/* $('#myGenresDropdown').val(), */
-                    language:   'ne',/* $('#myCountriesDropdown').val() */
+                    name:       bookTitle,
+                    author:     bookAuthor,
+                    genre:      bookGenre,
+                    language:   bookLanguage
                 }),
                 method: 'POST'
-            }).then(response => {
-                console.log(response)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message)
             })
     })
 

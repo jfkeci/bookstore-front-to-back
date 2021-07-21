@@ -152,9 +152,11 @@ class User{
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':password', $this->password);
 
-        if($stmt->execute()){
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt->execute();
 
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if(!empty($row)){
             $this->id=$row['id'];
             $this->username=$row['username'];
             $this->email=$row['email'];
@@ -163,10 +165,13 @@ class User{
             $this->zip_code=$row['zip_code'];
             $this->city=$row['city'];
             $this->address=$row['address'];
-        }
+            $this->created_at=$row['created_at'];
 
-        
+            return true;
+        }
+        return false;
     }
+
 }
 
 ?>

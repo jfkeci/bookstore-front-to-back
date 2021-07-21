@@ -11,12 +11,13 @@
             <!-- contact form -->
             <form class="tm-contact-form">
                <div class="form-group">
-                  <input type="email" id="loginEmail" class="form-control" placeholder="Email" required />
+                  <input type="email" id="loginEmail" class="form-control" placeholder="Email" required></input>
                </div>
                <div class="form-group">
-                  <input type="password" id="loginPassword" class="form-control" placeholder="Password" required />
+                  <input type="password" id="loginPassword" class="form-control" placeholder="Password" required></input>
                </div>
                <button class="tm-btn tm-btn-blue float-right" id="loginButton">Login</button>
+               <button class="tm-btn tm-btn-blue float-left" id="newbutton">bb</button>
             </form>
          </div>
       </div>
@@ -26,24 +27,6 @@
       <div class="col-md-6 col-sm-12 mb-md-0 mb-5 tm-overflow-auto">
          <div class="mr-lg-5">
             <!-- <form class="tm-contact-form">
-               <div class="form-group">
-                  <input type="text" id="email" name="email" class="form-control" placeholder="Name" required />
-               </div>
-               <div class="form-group">
-                  <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
-               </div>
-               <div class="form-group">
-                  <input type="text" id="email" name="email" class="form-control" placeholder="Name" required />
-               </div>
-               <div class="form-group">
-                  <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
-               </div>
-               <div class="form-group">
-                  <input type="text" id="email" name="email" class="form-control" placeholder="Name" required />
-               </div>
-               <div class="form-group">
-                  <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required />
-               </div>
                <div class="form-group">
                   <input type="text" id="email" name="email" class="form-control" placeholder="Name" required />
                </div>
@@ -65,29 +48,8 @@
          </address>
       </div>
    </section>
-   <section class="media tm-highlight tm-highlight-w-icon">
-      <div class="tm-highlight-icon">
-         <i class="fa tm-fa-6x fa-meetup"></i>
-      </div>
-      <div class="media-body">
-         <header>
-            <h2>Need a programmer?</h2>
-         </header>
-         <p class="tm-margin-b">text</p>
-         <a href="contact.php" class="tm-white-bordered-btn">Coontact me</a>
-      </div>
-   </section>
-</div>
-<footer>
-   Jfkeci
-</footer>
-</div>
-<!-- load JS files -->
-<script src="js/includes/jquery-1.11.3.min.js"></script>
-<script src="js/includes/popper.min.js"></script>
-<script src="js/includes/bootstrap.min.js"></script>
-<script src="js/login.js"></script>
-<script src="js/global.js"></script>
-</body>
 
-</html>
+   
+   <?php require_once('footer.php'); ?>
+
+   <script src="js/login.js"></script>

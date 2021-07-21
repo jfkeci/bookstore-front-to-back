@@ -50,7 +50,7 @@ class Book{
     }
 
     public function create(){
-        $query = 'INSERT INTO ' .$this->table . ' VALUES 
+        $query = 'INSERT INTO ' .$this->table . ' SET 
             name = :name, 
             author = :author, 
             genre = :genre,
