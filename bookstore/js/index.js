@@ -7,10 +7,10 @@ $(document).ready(function () {
         fetch('http://localhost/practice/php/php-rest-api-2/api/books/create.php',
             {
                 body: JSON.stringify({
-                    name:       $('#bookTitle').val(),
-                    author:     $('#myAuthorsDropdown').val(),
-                    genre:      $('#myGenresDropdown').val(),
-                    language:   $('#myCountriesDropdown').val()
+                    name:       'new author',/* $('#bookTitle').val(), */
+                    author:     22,/* $('#myAuthorsDropdown').val(), */
+                    genre:      1,/* $('#myGenresDropdown').val(), */
+                    language:   'ne',/* $('#myCountriesDropdown').val() */
                 }),
                 method: 'POST'
             }).then(response => {

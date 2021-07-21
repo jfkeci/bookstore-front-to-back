@@ -50,8 +50,7 @@
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                   <h4 class="modal-title">Are you sure?</h4>
                </div>
-               <div class="modal-footer">
-                  <button type="button" id="deleteAuthorButton" data-dismiss="modal" class="btn btn-default">Delete</button>
+               <div class="modal-footer" id="deleteModalButtons">
                   <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
                </div>
             </div>

@@ -3,7 +3,7 @@ $(document).ready(function () {
     showAuthors();
 
     $('#saveAuthorButton').click(function () {
-        fetch('/practice/php/php-rest-api-2/api/authors/create.php',
+        fetch('http://localhost/practice/php/php-rest-api-2/api/authors/create.php',
             {
                 body: JSON.stringify({ name: $('#authorName').val() }),
                 method: 'POST'
@@ -35,7 +35,28 @@ function showUpdateModal(name) {
     $('#modalUpdate').modal('show')
     $('#authorNameUpdate').val(name)
 }
-function showDeleteModal(id, name) {
+function showDeleteModal(id) {
+    console.log('click')
     $('#modalDelete').modal('show')
+    $("#deleteModalButtons").append('<button type="button" id="deleteAuthorButton" data-dismiss="modal" class="btn btn-default">Delete</button>')
 }
 
+function updateAuthor(){
+    $('#saveAuthorButton').click(function () {
+        fetch('http://localhost/practice/php/php-rest-api-2/api/authors/update.php',
+            {
+                body: JSON.stringify({ name: $('#authorName').val() }),
+                method: 'POST'
+            })
+    })
+}
+
+function deleteAuthor(id){
+    $('#saveAuthorButton').click(function () {
+        fetch('http://localhost/practice/php/php-rest-api-2/api/authors/delete.php?id='+id,
+            {
+                body: JSON.stringify({ id: id }),
+                method: 'DELETE'
+            })
+    })
+}
