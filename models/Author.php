@@ -1,6 +1,7 @@
 <?php
 
-class Author {
+class Author
+{
 
     private $conn;
     private $table = 'authors';
@@ -13,10 +14,11 @@ class Author {
     {
         $this->conn = $db;
     }
-    
 
-    public function read(){
-        $query = 'SELECT * FROM ' .$this->table. ' ORDER BY id DESC; ';
+
+    public function read()
+    {
+        $query = 'SELECT * FROM ' . $this->table . ' ORDER BY id DESC; ';
 
         $stmt = $this->conn->prepare($query);
 
@@ -25,8 +27,9 @@ class Author {
         return $stmt;
     }
 
-    public function read_single(){
-        $query = 'SELECT * FROM ' .$this->table. ' WHERE id = ?; ';
+    public function read_single()
+    {
+        $query = 'SELECT * FROM ' . $this->table . ' WHERE id = ?; ';
 
         $stmt = $this->conn->prepare($query);
 
@@ -38,13 +41,14 @@ class Author {
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $this->id=$row['id'];
-        $this->name=$row['name'];
-        $this->created_at=$row['created_at'];
+        $this->id = $row['id'];
+        $this->name = $row['name'];
+        $this->created_at = $row['created_at'];
     }
 
-    public function create(){
-        $query = 'INSERT INTO ' .$this->table. ' SET name = :name; ';
+    public function create()
+    {
+        $query = 'INSERT INTO ' . $this->table . ' SET name = :name; ';
 
         $stmt = $this->conn->prepare($query);
 
@@ -52,21 +56,21 @@ class Author {
 
         $stmt->bindParam(':name', $this->name);
 
-        if($stmt->execute()){
+        if ($stmt->execute()) {
             return true;
         }
 
         printf("error: %s.\n, $stmt->error");
         return false;
-
     }
 
-    public function update(){
-        $query = 'UPDATE ' .$this->table. ' SET 
+    public function update()
+    {
+        $query = 'UPDATE ' . $this->table . ' SET 
             name = :name 
         WHERE 
             id = :id;';
-        
+
         $stmt = $this->conn->prepare($query);
 
         $this->id = htmlspecialchars(strip_tags($this->id));
@@ -77,7 +81,7 @@ class Author {
 
         $stmt->execute();
 
-        if($stmt->execute()){
+        if ($stmt->execute()) {
             return true;
         }
 
@@ -85,9 +89,10 @@ class Author {
         return false;
     }
 
-    public function delete(){
-        $query = 'DELETE FROM ' .$this->table. ' WHERE id = :id;';
-        
+    public function delete()
+    {
+        $query = 'DELETE FROM ' . $this->table . ' WHERE id = :id;';
+
         $stmt = $this->conn->prepare($query);
 
         $this->id = htmlspecialchars(strip_tags($this->id));
@@ -96,7 +101,7 @@ class Author {
 
         $stmt->execute();
 
-        if($stmt->execute()){
+        if ($stmt->execute()) {
             return true;
         }
 
@@ -104,5 +109,3 @@ class Author {
         return false;
     }
 }
-
-?>

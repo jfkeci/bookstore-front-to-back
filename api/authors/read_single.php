@@ -24,7 +24,3 @@ $author_arr = array(
 );
 
 print_r(json_encode($author_arr));
-
-
-
-?>

@@ -17,10 +17,10 @@ $result = $genre->read();
 
 $num = $result->rowCount();
 
-if( $num > 0 ){
+if ($num > 0) {
     $genres_array = array();
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC)){
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
         $genre_item = array(
@@ -33,11 +33,6 @@ if( $num > 0 ){
     }
 
     echo json_encode($genres_array);
-}else{
+} else {
     echo json_encode(array('message' => 'No genres found'));
 }
-
-
-
-
-?>

@@ -23,15 +23,12 @@ $book->author = $data->author;
 $book->genre = $data->genre;
 $book->language = $data->language;
 
-if($book->update()){
+if ($book->update()) {
     echo json_encode(array(
         'message' => 'Book updated'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'Book not updated'
     ));
 }
-
-
-?>

@@ -4,15 +4,15 @@
    </div>
    <div class="media-body">
       <header>
-         <h2>Need Help?</h2>
+         <h2>Need a programmer?</h2>
       </header>
-      <p class="tm-margin-b">Curabitur magna tellus, condimentum vitae consectetur id, elementum sit amet erat. Phasellus arcu leo, sagittis fringilla nisi et, pulvinar vestibulum mi. Maecenas mollis ullamcorper est at dignissim.</p>
+      <p class="tm-margin-b"></p>
       <a href="contact.php" class="tm-white-bordered-btn">Contact Me</a>
    </div>
 </section>
 </div>
 <footer>
-   - Jfkeci
+   <a href="https://github.com/jfkeci">Jfkeci</a>
 </footer>
 </div>
 <script src="js/includes/jquery-1.11.3.min.js"></script>

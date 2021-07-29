@@ -24,7 +24,3 @@ $genre_arr = array(
 );
 
 print_r(json_encode($genre_arr));
-
-
-
-?>

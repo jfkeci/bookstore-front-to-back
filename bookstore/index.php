@@ -53,7 +53,7 @@
       </nav> -->
    </section>
 
-   
+
    <?php require_once('footer.php'); ?>
 
    <script src="js/index.js"></script>

@@ -20,15 +20,12 @@ $data = json_decode(file_get_contents("php://input"));
 $author->id = $data->id;
 $author->name = $data->name;
 
-if($author->update()){
+if ($author->update()) {
     echo json_encode(array(
         'message' => 'Author updated'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'Author not updated'
     ));
 }
-
-
-?>

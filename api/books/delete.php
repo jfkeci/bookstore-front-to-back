@@ -19,14 +19,12 @@ $data = json_decode(file_get_contents("php://input"));
 
 $book->id = $data->id;
 
-if($book->delete()){
+if ($book->delete()) {
     echo json_encode(array(
         'message' => 'Book deleted'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'Book not deleted'
     ));
 }
-
-?>

@@ -17,10 +17,10 @@ $result = $book->read();
 
 $num = $result->rowCount();
 
-if( $num > 0 ){
+if ($num > 0) {
     $books_array = array();
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC)){
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
         $book_item = array(
@@ -36,11 +36,6 @@ if( $num > 0 ){
     }
 
     echo json_encode($books_array);
-}else{
+} else {
     echo json_encode(array('message' => 'No books found'));
 }
-
-
-
-
-?>

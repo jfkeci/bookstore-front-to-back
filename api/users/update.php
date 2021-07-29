@@ -27,15 +27,12 @@ $user->city = $data->city;
 $user->country = $data->country;
 $user->address = $data->address;
 
-if($user->update()){
+if ($user->update()) {
     echo json_encode(array(
         'message' => 'User updated'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'User not updated'
     ));
 }
-
-
-?>

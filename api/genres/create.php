@@ -19,15 +19,12 @@ $data = json_decode(file_get_contents("php://input"));
 
 $genre->genre = $data->genre;
 
-if($genre->create()){
+if ($genre->create()) {
     echo json_encode(array(
         'message' => 'Genre created'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'Genre not created'
     ));
 }
-
-
-?>

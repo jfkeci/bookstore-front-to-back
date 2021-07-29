@@ -17,10 +17,10 @@ $result = $user->read();
 
 $num = $result->rowCount();
 
-if( $num > 0 ){
+if ($num > 0) {
     $users_array = array();
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC)){
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
         $user_item = array(
@@ -39,11 +39,6 @@ if( $num > 0 ){
     }
 
     echo json_encode($users_array);
-}else{
+} else {
     echo json_encode(array('message' => 'No users found'));
 }
-
-
-
-
-?>

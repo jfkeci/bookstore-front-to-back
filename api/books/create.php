@@ -22,15 +22,12 @@ $book->author = $data->author;
 $book->genre = $data->genre;
 $book->language = $data->language;
 
-if($book->create()){
+if ($book->create()) {
     echo json_encode(array(
         'message' => 'Book created'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'Book not created'
     ));
 }
-
-
-?>

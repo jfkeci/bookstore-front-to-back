@@ -27,7 +27,3 @@ $book_arr = array(
 );
 
 print_r(json_encode($book_arr));
-
-
-
-?>

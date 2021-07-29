@@ -27,11 +27,10 @@ require_once('header.php');
          </div>
       </div>
       <div class="col-md-6 col-sm-12">
-         <p class="tm-margin-b-p">Morbi auctor euismod dictum. Morbi eu nibh in nulla interdum placerat. Donec pellentesque est at sem aliquam hendrerit.</p>
          <address>
             <span class="tm-blue-text">Mailing Address</span><br>
-            1126 Aenean ac mauris at ex,<br>
-            venenatis lobortis id in 11600 <br><br>
+            Stjepana Radića 45,<br>
+            Hrvatska, Gotalovo 48331 <br><br>
             <div class="tm-blue-text">
                Email: <a class="tm-blue-text" href="mailto:ja.lip132@gmail.com">ja.lip132@gmail.com</a><br>
                Tel: <a class="tm-blue-text" href="tel:+385992445447">00385-99-244-5447</a><br>
@@ -49,7 +48,7 @@ require_once('header.php');
       </div>
    </section>
 
-   
+
    <?php require_once('footer.php'); ?>
 
    <script src="js/contact.js"></script>

@@ -23,15 +23,12 @@ exit;
  */
 $author->name = $data->name;
 
-if($author->create()){
+if ($author->create()) {
     echo json_encode(array(
         'message' => 'Author created'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'Author not created'
     ));
 }
-
-
-?>

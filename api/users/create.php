@@ -25,15 +25,12 @@ $user->city = $data->city;
 $user->country = $data->country;
 $user->address = $data->address;
 
-if($user->create()){
+if ($user->create()) {
     echo json_encode(array(
         'message' => 'User created'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'User not created'
     ));
 }
-
-
-?>

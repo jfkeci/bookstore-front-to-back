@@ -20,15 +20,12 @@ $data = json_decode(file_get_contents("php://input"));
 $genre->id = $data->id;
 $genre->genre = $data->genre;
 
-if($genre->update()){
+if ($genre->update()) {
     echo json_encode(array(
         'message' => 'Genre updated'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'Genre not updated'
     ));
 }
-
-
-?>

@@ -1,7 +1,8 @@
 <?php
 
-class User{
-        
+class User
+{
+
     private $conn;
     private $table = 'users';
 
@@ -20,8 +21,9 @@ class User{
         $this->conn = $db;
     }
 
-    public function read(){
-        $query = 'SELECT * FROM ' .$this->table .';';
+    public function read()
+    {
+        $query = 'SELECT * FROM ' . $this->table . ';';
 
         $stmt = $this->conn->prepare($query);
 
@@ -30,7 +32,8 @@ class User{
         return $stmt;
     }
 
-    public function read_single(){
+    public function read_single()
+    {
         $query = 'SELECT * FROM ' . $this->table . ' WHERE id = ?;';
 
         $stmt = $this->conn->prepare($query);
@@ -41,18 +44,19 @@ class User{
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $this->id=$row['id'];
-        $this->username=$row['username'];
-        $this->email=$row['email'];
-        $this->password=$row['password'];
-        $this->country=$row['country'];
-        $this->zip_code=$row['zip_code'];
-        $this->city=$row['city'];
-        $this->address=$row['address'];
-        $this->created_at=$row['created_at'];
+        $this->id = $row['id'];
+        $this->username = $row['username'];
+        $this->email = $row['email'];
+        $this->password = $row['password'];
+        $this->country = $row['country'];
+        $this->zip_code = $row['zip_code'];
+        $this->city = $row['city'];
+        $this->address = $row['address'];
+        $this->created_at = $row['created_at'];
     }
 
-    public function create(){
+    public function create()
+    {
         $query = 'INSERT INTO ' . $this->table . ' SET 
             username = :username, 
             email = :email, 
@@ -61,7 +65,7 @@ class User{
             zip_code = :zip_code,
             city = :city,
             address = :address ;';
-        
+
         $stmt = $this->conn->prepare($query);
 
         $this->username = htmlspecialchars(strip_tags($this->username));
@@ -80,7 +84,7 @@ class User{
         $stmt->bindParam(':city', $this->city);
         $stmt->bindParam(':address', $this->address);
 
-        if($stmt->execute()){
+        if ($stmt->execute()) {
             return true;
         }
 
@@ -88,7 +92,8 @@ class User{
         return false;
     }
 
-    public function update(){
+    public function update()
+    {
         $query = 'UPDATE ' . $this->table . ' SET 
             username = :username, 
             email = :email, 
@@ -121,7 +126,7 @@ class User{
         $stmt->bindParam(':city', $this->city);
         $stmt->bindParam(':address', $this->address);
 
-        if($stmt->execute()){
+        if ($stmt->execute()) {
             return true;
         }
 
@@ -129,14 +134,15 @@ class User{
         return false;
     }
 
-    public function delete(){
+    public function delete()
+    {
         $query = 'DELETE FROM ' . $this->table . ' WHERE id = :id;';
 
         $stmt = $this->conn->prepare($query);
 
         $stmt->bindParam(':id', $this->id);
 
-        if($stmt->execute()){
+        if ($stmt->execute()) {
             return true;
         }
 
@@ -144,7 +150,8 @@ class User{
         return false;
     }
 
-    public function login(){
+    public function login()
+    {
         $query = 'SELECT * FROM ' . $this->table . ' WHERE email = :email AND password = :password;';
 
         $stmt = $this->conn->prepare($query);
@@ -156,22 +163,19 @@ class User{
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if(!empty($row)){
-            $this->id=$row['id'];
-            $this->username=$row['username'];
-            $this->email=$row['email'];
-            $this->password=$row['password'];
-            $this->country=$row['country'];
-            $this->zip_code=$row['zip_code'];
-            $this->city=$row['city'];
-            $this->address=$row['address'];
-            $this->created_at=$row['created_at'];
+        if (!empty($row)) {
+            $this->id = $row['id'];
+            $this->username = $row['username'];
+            $this->email = $row['email'];
+            $this->password = $row['password'];
+            $this->country = $row['country'];
+            $this->zip_code = $row['zip_code'];
+            $this->city = $row['city'];
+            $this->address = $row['address'];
+            $this->created_at = $row['created_at'];
 
             return true;
         }
         return false;
     }
-
 }
-
-?>

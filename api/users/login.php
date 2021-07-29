@@ -21,19 +21,14 @@ $user->email = isset($_GET['email']) ? $_GET['email'] : die();
 $user->password = isset($_GET['password']) ? $_GET['password'] : die();
 
 
-if($user->login()){
+if ($user->login()) {
     print_r(json_encode(array(
         'user' => 'true',
         'id' => $user->id
     )));
-}else{
+} else {
     print_r(json_encode(array(
         'user' => 'false',
         'id' => ''
     )));
 }
-
-
-
-
-?>

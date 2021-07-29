@@ -1,3 +1,28 @@
+<?php
+
+if (isset($_GET['book_id'])) {
+   $decoded = '';
+
+   $url = 'http://localhost/practice/php/php-rest-api-2/api/users/login.php?id=' . $_GET['book_id'];
+
+   $ch = curl_init();
+
+   curl_setopt($ch, CURLOPT_URL, $url);
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+   $resp = curl_exec($ch);
+
+   if ($e = curl_error($ch)) {
+      echo $e;
+   } else {
+      $decoded = json_decode($resp);
+   }
+} else {
+   header('Location: http://localhost/practice/php/php-rest-api-2/bookstore/index.php');
+}
+
+?>
+
 <?php require_once('header.php'); ?>
 
 
@@ -24,7 +49,7 @@
                <div class="tm-gallery-item-overlay">
                   <img src="img/image-06.jpg" alt="Image" class="img-fluid tm-img-center">
                </div>
-               <p class="tm-figcaption no-pad-b">Suspendisse suscipit</p>
+               <p class="tm-figcaption no-pad-b"> <?php echo $decoded; ?> </p>
             </a>
          </figure>
          <figure class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item mb-5">

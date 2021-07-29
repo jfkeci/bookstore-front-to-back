@@ -78,7 +78,7 @@
       </div>
    </div>
 
-   
+
    <?php require_once('footer.php'); ?>
 
    <script src="js/authors.js"></script>

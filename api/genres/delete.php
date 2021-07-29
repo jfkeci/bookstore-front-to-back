@@ -19,15 +19,12 @@ $data = json_decode(file_get_contents("php://input"));
 
 $genre->id = $data->id;
 
-if($genre->delete()){
+if ($genre->delete()) {
     echo json_encode(array(
         'message' => 'Genre deleted'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'Genre not deleted'
     ));
 }
-
-
-?>

@@ -19,14 +19,12 @@ $data = json_decode(file_get_contents("php://input"));
 
 $user->id = $data->id;
 
-if($user->delete()){
+if ($user->delete()) {
     echo json_encode(array(
         'message' => 'User deleted'
     ));
-}else{
+} else {
     echo json_encode(array(
         'message' => 'User not deleted'
     ));
 }
-
-?>
